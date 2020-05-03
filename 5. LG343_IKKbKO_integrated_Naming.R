@@ -14,45 +14,41 @@ DefaultAssay(LG343_IKKbKO_integrated) <- 'RNA'
 DimPlot(LG343_IKKbKO_integrated, reduction = 'umap', label = T)
 
 #Add marker genes
+
+#Neurons
+DotPlot(object = LG343_IKKbKO_integrated, features = c("Map2")) + RotatedAxis()
 #excitatory neurons
-#sig_EN<-c("SLC17A7", "CAMK2A", "NRGN")
 sig_EN<-c("Slc17a7", "Camk2a", "Nrgn")
 markers.to.plot <- as.matrix(sig_EN)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
-DotPlot(object = LG343_IKKbKO_integrated, features = c("Pla2g7", "Bnc2", "Slc47a1", "Ttr", "Trpm3")) + RotatedAxis()
-DotPlot(object = LG343_IKKbKO_integrated, features = c("Map2")) + RotatedAxis()
+
+
 #inhibitory neurons
-#sig_EN<-c("GAD1", "GAD2")
 sig_IN<-c("Gad1", "Gad2")
 markers.to.plot <- as.matrix(sig_IN)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
 
 #oligodendrocytes
-#sig_EN<-c("PLP1", "MBP", "MOBP")
 sig_OL<-c("Plp1", "Mbp", "Mobp")
 markers.to.plot <- as.matrix(sig_OL)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
 
 #OPCs
-#sig_OPC<-c("SCRG1", "PDGFRA", "OLIG1")
 sig_OPC<-c("Scrg1", "Pdgfra", "Olig1")
 markers.to.plot <- as.matrix(sig_OPC)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
 
 #endothelial cells
-#sig_ENC<-c("VTN", "MGP", "IGFBP7")
 sig_ENC<-c("Vtn", "Mgp", "Igfbp7")
 markers.to.plot <- as.matrix(sig_ENC)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
 
 #microglia
-#sig_MICROG<-c("C1QA", "TYROBP", "HEXB")
 sig_MICROG<-c("Cx3cr1", "P2ry12", "Csf1r")
 markers.to.plot <- as.matrix(sig_MICROG)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
 
 #astrocytes
-#sig_AST<-c("CLU, ALDOC, PLA2G7")
 sig_AST<-c("Clu", "Aldoc", "Pla2g7")
 markers.to.plot <- as.matrix(sig_AST)
 DotPlot(object = LG343_IKKbKO_integrated, features = rev(x = markers.to.plot)) + RotatedAxis()
