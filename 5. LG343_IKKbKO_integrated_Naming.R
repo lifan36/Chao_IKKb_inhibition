@@ -78,3 +78,4 @@ markers.to.plot <- c("Plp1", "Mbp", "Mobp","Slc17a7", "Nrgn", "Gad1", "Gad2", "C
 DotPlot(LG343_IKKbKO_integrated, features = rev(markers.to.plot), cols = c("orange", "plum", "pink", "grey"), dot.scale = 8, 
         split.by = "Condition") + RotatedAxis()
 
+saveRDS(LG343_IKKbKO_integrated, file = "LG343_IKKbKO_integrated_ready_4_DEGs.rds")
